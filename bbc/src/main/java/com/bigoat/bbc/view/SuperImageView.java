@@ -94,12 +94,4 @@ public class SuperImageView extends AppCompatImageView {
             ILog.d("加载图片失败：" + src.getClass().getName());
         }
     }
-
-    public static void load123(SuperImageView superImageView, Object res) {
-//        CropTransformation cropTransformation = new CropTransformation();
-//        RoundedCornersTransformation cropCircleTransformation = new RoundedCornersTransformation()
-    }
-
-
-
 }

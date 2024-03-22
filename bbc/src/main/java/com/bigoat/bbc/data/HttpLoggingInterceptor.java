@@ -1,9 +1,11 @@
 package com.bigoat.bbc.data;
 
+import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.Buffer;
 import java.nio.charset.Charset;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
@@ -18,7 +20,6 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import okhttp3.internal.http.HttpHeaders;
-import okio.Buffer;
 
 import static com.bigoat.bbc.data.HttpLoggingInterceptor.Level.BODY;
 
@@ -194,13 +195,7 @@ public class HttpLoggingInterceptor implements Interceptor {
 
     private void bodyToString(Request request) {
         try {
-            Request copy = request.newBuilder().build();
-            RequestBody body = copy.body();
-            if (body == null) return;
-            Buffer buffer = new Buffer();
-            body.writeTo(buffer);
-            Charset charset = getCharset(body.contentType());
-            log("\tbody:" + buffer.readString(charset));
+            log("\tbody:" + request.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
