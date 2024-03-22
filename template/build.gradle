@@ -1,14 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
-
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "cn.lecent.bbc.template"
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
 
@@ -36,6 +34,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    compile project(path: ':bbc')
+    api project(path: ':bbc')
 
 }

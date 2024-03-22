@@ -13,13 +13,10 @@ import com.bigoat.bbc.sample.R;
 import com.bigoat.bbc.sample.my.MyViewModel;
 import com.blankj.utilcode.util.FileUtils;
 import com.blankj.utilcode.util.ImageUtils;
-import com.xuexiang.xui.utils.DrawableUtils;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.xuexiang.xui.utils.ResUtils.getResources;
 
 public class ViewViewModel extends MyViewModel {
     public BaseLiveData<Boolean> currentTimeEnableData = new BaseLiveData<>(true);

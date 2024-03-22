@@ -6,7 +6,6 @@ import android.view.Gravity;
 
 import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.Utils;
-import com.lzy.okgo.OkGo;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -49,7 +48,7 @@ public abstract class BaseApplication extends Application {
         Utils.init(this);
 
         // 初始化网络
-        OkGo.getInstance().init(this);
+//        OkGo.getInstance().init(this);
 
         // 初始化配置
         ILog.getConfig().setStackOffset(2);

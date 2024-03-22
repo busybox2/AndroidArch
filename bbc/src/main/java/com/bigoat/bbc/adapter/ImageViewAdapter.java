@@ -153,37 +153,4 @@ public class ImageViewAdapter {
             Glide.with(view).load(src).apply(options).into(view);
         }
     }
-
-    // Glide
-    private void loadTest(ImageView view, String url) {
-        Glide.with(view)
-                .load(url)
-                // 请求中显示，url空、未设置error和fallback会继续显示
-                .placeholder(new ColorDrawable(Color.BLACK))
-                // 请求失败永久显示
-                .error(new ColorDrawable(Color.RED))
-                // 请求url为空时显示
-                .fallback(R.drawable.brvah_sample_footer_loading)
-                // 多重变换
-                .transform(new FitCenter(), new CircleCrop())
-                // 过度选项，BitmapTransitionOptions、DrawableTransitionOptions
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .transition(GenericTransitionOptions.with(R.anim.fragment_close_enter))
-                // 磁盘缓存策略
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                // 仅从缓存加载图片
-                .onlyRetrieveFromCache(true)
-                // 跳过缓存
-                .skipMemoryCache(true)
-                /*
-                 * 设置加载尺寸
-                 * 1. 如果 View 的布局参数尺寸 > 0 且 > padding，则使用该布局参数；
-                 * 2. 如果 View 尺寸 > 0 且 > padding，使用该实际尺寸；
-                 * 3. 如果 View 布局参数为 wrap_content 且至少已发生一次 layout ，则打印一行警告日志，建议使用 Target.SIZE_ORIGINAL 或通过 override() 指定其他固定尺寸，并使用屏幕尺寸为该请求尺寸；
-                 * 4. 其他情况下（布局参数为 match_parent， 0， 或 wrap_content 且没有发生过 layout ），则等待布局完成，然后回溯到步骤1。
-                 */
-                .override(100, 100)
-                // 目标
-                .into(view);
-    }
 }

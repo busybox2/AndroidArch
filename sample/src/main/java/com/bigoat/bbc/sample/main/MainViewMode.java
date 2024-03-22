@@ -14,7 +14,6 @@ import com.bigoat.bbc.sample.log.LogActivity;
 import com.bigoat.bbc.sample.log.LogViewModel;
 import com.bigoat.bbc.sample.my.MyViewModel;
 import com.bigoat.bbc.sample.toast.ToastActivity;
-import com.bigoat.bbc.sample.utils.UtilsActivity;
 import com.bigoat.bbc.sample.view.ViewActivity;
 import com.bigoat.bbc.util.TimerTaskUtils;
 
@@ -42,7 +41,6 @@ public class MainViewMode extends MyViewModel {
         mains.add(new Main("SuperListView", ListActivity.class));
         mains.add(new Main("自定义View", ViewActivity.class));
         mains.add(new Main("Dialog", DialogActivity.class));
-        mains.add(new Main("Utils", UtilsActivity.class));
         mainData.value(mains);
     }
 }

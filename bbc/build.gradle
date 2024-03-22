@@ -1,13 +1,14 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 34
+
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 24
-        versionName "1.2.0"
+        targetSdkVersion 34
+        versionCode 25
+        versionName "1.5.0"
     }
 
     buildTypes {
@@ -19,8 +20,8 @@ android {
 
     // 使用java 8编译
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     dataBinding {
@@ -34,34 +35,35 @@ dependencies {
     // 原生依赖
     api 'androidx.appcompat:appcompat:1.6.1'
     api 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    api 'androidx.constraintlayout:constraintlayout:2.1.4'
     api 'androidx.recyclerview:recyclerview:1.3.2'
-    testImplementation 'junit:junit:4.13.2'
 
     // Retrofit: https://square.github.io/retrofit/
     api 'com.squareup.retrofit2:retrofit:2.9.0'
     api 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     // OkHttp: https://square.github.io/okhttp
-    api "com.squareup.okhttp3:okhttp:4.4.0"
+    api "com.squareup.okhttp3:okhttp:4.12.0"
 
     // Gson: https://github.com/google/gson
-    api 'com.google.code.gson:gson:2.8.6'
+    api 'com.google.code.gson:gson:2.10.1'
 
-    // OkGo: https://github.com/jeasonlzy/okhttp-OkGo
-    api 'com.lzy.net:okgo:3.0.4'
+
+//    // OkGo: https://github.com/jeasonlzy/okhttp-OkGo
+//    api 'com.lzy.net:okgo:3.0.4'
 
     // AndroidUtil: https://github.com/Blankj/AndroidUtilCode
-    api 'com.blankj:utilcodex:1.30.5'
+    api 'com.blankj:utilcodex:1.31.1'
 
     // Loading: https://github.com/81813780/AVLoadingIndicatorView
     api 'com.wang.avi:library:2.1.3'
 
     // BaseRecycler: http://www.recyclerview.org/
-    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2'
+    api "io.github.cymchad:BaseRecyclerViewAdapterHelper:3.0.14"
+//    api "io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4"
 
-    // Toasty https://github.com/GrenderG/Toasty
-    api 'com.github.GrenderG:Toasty:1.4.2'
+
+//    // Toasty https://github.com/GrenderG/Toasty
+//    api 'com.github.GrenderG:Toasty:1.5.2'
 
     // Glide: https://muyangmin.github.io/glide-docs-cn/
     api 'com.github.bumptech.glide:glide:4.12.0'
@@ -69,19 +71,14 @@ dependencies {
 
 
     // https://github.com/wasabeef/glide-transformations
-    api 'jp.wasabeef:glide-transformations:4.1.0'
-
-    // XUI: http://xuexiangjys.club/XUI/
-    // api 'com.github.xuexiangjys:XUI:1.1.3'
-
-
+    api 'jp.wasabeef:glide-transformations:4.3.0'
 }
 
-publish {
-    userOrg = 'bigoat'
-    groupId = 'com.bigoat.android'
-    artifactId = 'bbc'
-    publishVersion = '1.0.3'
-    desc = 'This is android mvvm arch.'
-    website = 'https://github.com/yaolunwei/Androidbbc'
-}
+//publish {
+//    userOrg = 'bigoat'
+//    groupId = 'com.bigoat.android'
+//    artifactId = 'bbc'
+//    publishVersion = '1.0.3'
+//    desc = 'This is android mvvm arch.'
+//    website = 'https://github.com/yaolunwei/Androidbbc'
+//}

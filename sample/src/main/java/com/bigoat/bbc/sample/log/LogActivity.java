@@ -6,7 +6,6 @@ import com.bigoat.bbc.base.ILog;
 import com.bigoat.bbc.sample.R;
 import com.bigoat.bbc.sample.databinding.LogActivityBinding;
 import com.bigoat.bbc.sample.my.MyActivity;
-import com.zzhoujay.richtext.RichText;
 
 /**
  * <pre>
@@ -26,7 +25,6 @@ public class LogActivity extends MyActivity<LogActivityBinding, LogViewModel> {
     @Override
     protected void myCreate(@NonNull LogActivityBinding bind, @NonNull LogViewModel vm) {
         setTitle("日志组件");
-        RichText.initCacheDir(this);
 
         // 动态调用日志
         logd("logd 我是debug日志");
@@ -92,7 +90,6 @@ public class LogActivity extends MyActivity<LogActivityBinding, LogViewModel> {
                 "### RoadMap\n" +
                 "- 屏幕上显示日志";
 
-        RichText.fromMarkdown(md).into(bind.doc);
         bind.setVm(vm);
     }
 }
