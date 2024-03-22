@@ -21,7 +21,6 @@
             android:textSize="@dimen/sp_18"
             android:gravity="center"
             tools:text="title"
-            app:shapeCornerRadius="@{10}"
             android:text="@{vm.msgData}"/>
 
     </LinearLayout>

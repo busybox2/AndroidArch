@@ -20,24 +20,24 @@ public class ToastViewModel extends MyViewModel {
         } else {
             switch (type) {
                 case NORMAL:
-                    ToastUtils.setBgColor(Color.parseColor("#353A3E"));
-                    ToastUtils.setMsgColor(Color.WHITE);
+                    ToastUtils.getDefaultMaker().setBgColor(Color.parseColor("#353A3E"));
+                    ToastUtils.getDefaultMaker().setTextColor(Color.WHITE);
                     break;
                 case INFO:
-                    ToastUtils.setBgColor(Color.parseColor("#3F51B5"));
-                    ToastUtils.setMsgColor(Color.WHITE);
+                    ToastUtils.getDefaultMaker().setBgColor(Color.parseColor("#3F51B5"));
+                    ToastUtils.getDefaultMaker().setTextColor(Color.WHITE);
                     break;
                 case WARN:
-                    ToastUtils.setBgColor(Color.parseColor("#FFA900"));
-                    ToastUtils.setMsgColor(Color.WHITE);
+                    ToastUtils.getDefaultMaker().setBgColor(Color.parseColor("#FFA900"));
+                    ToastUtils.getDefaultMaker().setTextColor(Color.WHITE);
                     break;
                 case ERROR:
-                    ToastUtils.setBgColor(Color.parseColor("#D50000"));
-                    ToastUtils.setMsgColor(Color.WHITE);
+                    ToastUtils.getDefaultMaker().setBgColor(Color.parseColor("#D50000"));
+                    ToastUtils.getDefaultMaker().setTextColor(Color.WHITE);
                     break;
                 case SUCCESS:
-                    ToastUtils.setBgColor(Color.parseColor("#388E3C"));
-                    ToastUtils.setMsgColor(Color.WHITE);
+                    ToastUtils.getDefaultMaker().setBgColor(Color.parseColor("#388E3C"));
+                    ToastUtils.getDefaultMaker().setTextColor(Color.WHITE);
                     break;
             }
             ToastUtils.showShort(msg);

@@ -24,32 +24,32 @@ public interface IToast {
         static Config config = new Config();
 
         public Config setGravity(final int gravity) {
-            ToastUtils.setGravity(gravity, 0, 0);
+            ToastUtils.getDefaultMaker().setGravity(gravity, 0, 0);
             return this;
         }
 
         public Config setGravity(final int gravity, final int xOffset, final int yOffset) {
-            ToastUtils.setGravity(gravity, xOffset, yOffset);
+            ToastUtils.getDefaultMaker().setGravity(gravity, xOffset, yOffset);
             return this;
         }
 
         public Config setBgColor(@ColorInt final int backgroundColor) {
-            ToastUtils.setBgColor(backgroundColor);
+            ToastUtils.getDefaultMaker().setBgColor(backgroundColor);
             return this;
         }
 
         public Config setBgResource(@DrawableRes final int bgResource) {
-            ToastUtils.setBgResource(bgResource);
+            ToastUtils.getDefaultMaker().setBgResource(bgResource);
             return this;
         }
 
         public Config setMsgColor(@ColorInt final int msgColor) {
-            ToastUtils.setMsgColor(msgColor);
+            ToastUtils.getDefaultMaker().setTextColor(msgColor);
             return this;
         }
 
         public Config setMsgTextSize(final int textSize) {
-            ToastUtils.setMsgTextSize(textSize);
+            ToastUtils.getDefaultMaker().setTextSize(textSize);
             return this;
         }
     }
@@ -59,8 +59,8 @@ public interface IToast {
     }
 
     default void toast(TYPE type, String msg) {
-        ToastUtils.setBgColor(Color.parseColor("#353A3E"));
-        ToastUtils.setMsgColor(Color.WHITE);
+        ToastUtils.getDefaultMaker().setBgColor(Color.parseColor("#353A3E"));
+        ToastUtils.getDefaultMaker().setTextColor(Color.WHITE);
         ToastUtils.showShort(msg);
     }
 
@@ -116,8 +116,8 @@ public interface IToast {
     }
 
     static void staticToast(TYPE type, String msg) {
-        ToastUtils.setBgColor(Color.parseColor("#353A3E"));
-        ToastUtils.setMsgColor(Color.WHITE);
+        ToastUtils.getDefaultMaker().setBgColor(Color.parseColor("#353A3E"));
+        ToastUtils.getDefaultMaker().setTextSize(Color.WHITE);
         ToastUtils.showShort(msg);
     }
 }

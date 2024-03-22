@@ -11,7 +11,10 @@ import com.bigoat.bbc.sample.baselivedata.BaseLiveDataActivity;
 import com.bigoat.bbc.sample.databinding.MainActivityBinding;
 import com.bigoat.bbc.sample.databinding.MainItemLayoutBinding;
 import com.bigoat.bbc.sample.autoArg.JumpActivity;
+import com.bigoat.bbc.sample.log.LogActivity;
 import com.bigoat.bbc.sample.my.MyActivity;
+import com.bigoat.bbc.sample.utils.UtilsActivity;
+import com.bigoat.bbc.util.TimerTaskUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
@@ -61,7 +64,7 @@ public class MainActivity extends MyActivity<MainActivityBinding, MainViewMode> 
             }
         });
 
-//        go(BaseLiveDataActivity.class);
+        go(UtilsActivity.class);
     }
 
 }

@@ -6,7 +6,7 @@
     <data>
         <variable name="vm" type="com.bigoat.bbc.sample.view.ViewViewModel" />
         <import type="com.bigoat.bbc.sample.R"/>
-        <import type="com.bigoat.bbc.view.ImageViewAdapter.Transform"/>
+<!--        <import type="com.bigoat.bbc.view.ImageViewAdapter.Transform"/>-->
     </data>
 
     <ScrollView
@@ -169,23 +169,23 @@
                 android:gravity="center"
                 android:text="变换"
                 android:textSize="@dimen/sp_24"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:imageTransform="@{Transform.CropTransformation}"
-                app:imageSrc='@{R.drawable.img2}'/>
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:imageTransform="@{Transform.CropTransformation}"-->
+<!--                app:imageSrc='@{R.drawable.img2}'/>-->
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:imageTransform="@{Transform.CropCircleTransformation}"
-                app:imageSrc='@{R.drawable.img2}'/>
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:imageTransform="@{Transform.CropCircleTransformation}"-->
+<!--                app:imageSrc='@{R.drawable.img2}'/>-->
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:imageTransform="@{Transform.RoundedCornersTransformation}"
-                app:imageSrc='@{R.drawable.img2}'/>
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:imageTransform="@{Transform.RoundedCornersTransformation}"-->
+<!--                app:imageSrc='@{R.drawable.img2}'/>-->
 
         </LinearLayout>
 

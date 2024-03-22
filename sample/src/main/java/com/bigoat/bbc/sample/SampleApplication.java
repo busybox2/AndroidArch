@@ -1,6 +1,7 @@
 package com.bigoat.bbc.sample;
 
 import com.bigoat.bbc.base.BaseApplication;
+import com.blankj.utilcode.util.LogUtils;
 
 /**
  * <pre>
@@ -14,7 +15,9 @@ public class SampleApplication extends BaseApplication {
 
     @Override
     public void myCreate() {
-        // 创建语音引擎
+        LogUtils.getConfig().setSingleTagSwitch(true);
+        LogUtils.getConfig().setLogHeadSwitch(false);
+        LogUtils.getConfig().setBorderSwitch(false);
     }
 
     @Override
