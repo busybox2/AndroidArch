@@ -2,11 +2,13 @@ package com.bigoat.bbc.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Canvas;
 import android.util.AttributeSet;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
+
 
 import com.bigoat.bbc.R;
 
@@ -25,8 +27,8 @@ import java.util.Locale;
 public class CurrentTimeView extends AppCompatTextView {
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 aa E HH:mm:ss", Locale.CHINESE);
     private long updateInterval = 1;
-    private Runnable runnable = new Runnable() {
-        Date d = new Date();
+    private final Runnable runnable = new Runnable() {
+        final Date d = new Date();
         @Override
         public void run() {
             d.setTime(System.currentTimeMillis());
@@ -36,29 +38,22 @@ public class CurrentTimeView extends AppCompatTextView {
         }
     };
 
-    /**
-     * 在java代码里new的时候会用到
-     */
     public CurrentTimeView(Context context) {
-        this(context, null);
+        super(context);
+        init(context, null);
     }
 
-    /**
-     * 在xml布局文件中使用时自动调用
-     */
     public CurrentTimeView(Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs, -1);
+        super(context, attrs);
+        init(context, attrs);
     }
 
-    /**
-     * 不会自动调用，如果有默认style时，在第二个构造函数中调用
-     */
     public CurrentTimeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initAttrs(context, attrs);
+        init(context, attrs);
     }
 
-    private void initAttrs(Context context, AttributeSet attrs) {
+    private void init(Context context, AttributeSet attrs) {
         if (attrs == null) return;
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.CurrentTimeView);

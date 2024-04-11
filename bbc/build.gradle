@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 34
@@ -55,7 +56,7 @@ dependencies {
     api 'com.blankj:utilcodex:1.31.1'
 
     // Loading: https://github.com/81813780/AVLoadingIndicatorView
-    api 'com.wang.avi:library:2.1.3'
+//    api 'com.wang.avi:library:2.1.3'
 
     // BaseRecycler: http://www.recyclerview.org/
     api "io.github.cymchad:BaseRecyclerViewAdapterHelper:3.0.14"
@@ -78,7 +79,25 @@ dependencies {
 //    userOrg = 'bigoat'
 //    groupId = 'com.bigoat.android'
 //    artifactId = 'bbc'
-//    publishVersion = '1.0.3'
+//    publishVersion = '1.5.0'
 //    desc = 'This is android mvvm arch.'
 //    website = 'https://github.com/yaolunwei/Androidbbc'
+//}
+//
+//publishing {
+//    publications {
+//        release(MavenPublication) {
+//            groupId = 'com.bigoat.android'
+//            artifactId 'bbc'
+//            version '1.5.0'
+//            // 指定需要发布的构建产物，例如一个Android库模块
+//            from components.release
+//        }
+//    }
+//    repositories {
+//        maven {
+//            // 替换为你的仓库URL
+//            url "file://localhost/path/to/your/repo"
+//        }
+//    }
 //}
