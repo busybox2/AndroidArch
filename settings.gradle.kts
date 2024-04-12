@@ -1,8 +1,8 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
@@ -10,9 +10,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
-        jcenter()
     }
 }
+
 rootProject.name = "Androidbbc"
-include ':sample', ':bbc'
+include(":sample")
+include(":bbc")
+//include(":template")

@@ -25,7 +25,6 @@ public class LogActivity extends MyActivity<LogActivityBinding, LogViewModel> {
     @Override
     protected void myCreate(@NonNull LogActivityBinding bind, @NonNull LogViewModel vm) {
         setTitle("日志组件");
-
         // 动态调用日志
         logd("logd 我是debug日志");
         loge("loge 我是错误日志");

@@ -10,7 +10,6 @@ import android.widget.ImageView;
 
 import androidx.databinding.BindingAdapter;
 
-import com.bigoat.bbc.R;
 import com.bumptech.glide.GenericTransitionOptions;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.MultiTransformation;
